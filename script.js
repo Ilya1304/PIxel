@@ -1,0 +1,1 @@
+let imgs = document.querySelector('.img2')
