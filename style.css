@@ -37,6 +37,7 @@ header{
 .main1{
     padding-bottom: 50%;
     background-color: #5F5191;
+    
 }
 .main2{
     padding-bottom: 30%;
@@ -48,7 +49,7 @@ img{
 }
 
 .containerColumn1{
-    padding-left: 10%;
+    padding-left: 34%;
     padding-top: 5%;
     display: grid;
     grid-template-rows: 160px 10px 160px 10px;
@@ -68,7 +69,35 @@ footer{
 
 .img2{
     width: 90%;
+    opacity: 0; /* Начальная непрозрачность для анимации */
+    transform: translateY(20px); /* Начальное смещение для анимации */
+    animation: fadeInUp 0.5s forwards; /* Применение анимации */
+    transition: transform 0.3s, opacity 0.3s; /* Переходы для эффектов при наведении */
 }
+
+.img2:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    opacity: 1; /* Полная непрозрачность при наведении */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1; /* Конечная непрозрачность */
+        transform: translateY(0); /* Конечное положение */
+    }
+}
+
+p {
+    opacity: 0; /* Начальная непрозрачность для анимации */
+    transform: translateY(20px); /* Начальное смещение для анимации */
+    animation: fadeInUp 0.5s forwards; /* Применение анимации */
+    animation-delay: 0.5s; /* Задержка для текста */
+}
+
+p:nth-child(3n) {
+    animation-delay: 0.7s; /* Задержка для каждого третьего элемента */
+}
+
 
 /* .img1{
     padding-top: 20%;
